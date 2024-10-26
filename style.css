@@ -1,0 +1,93 @@
+body {
+    background-color: #0a0a0a;
+    color: #00ccff;
+    font-family: "Courier New", Courier, monospace;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    animation: red-alert 3s infinite alternate; /* Red alert background effect */
+}
+
+@keyframes red-alert {
+    0%, 100% { background-color: #0a0a0a; }
+    50% { background-color: #330000; }
+}
+
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    background: rgba(10, 10, 10, 0.9);
+    border-bottom: 2px solid #00ccff;
+}
+
+header h1 {
+    color: #00ccff;
+    font-size: 2.5em;
+    margin: 0;
+    letter-spacing: 0.3em;
+    text-shadow: 0 0 10px #00ccff;
+    animation: flicker 1.5s infinite alternate;
+}
+
+@keyframes flicker {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.8; }
+}
+
+.container {
+    text-align: center;
+    margin-top: 100px;
+}
+
+.audio-controls button {
+    background-color: #111;
+    color: #00ccff;
+    border: 1px solid #00ccff;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.1s;
+}
+
+.audio-controls button:hover {
+    background-color: #222;
+    transform: scale(1.05);
+}
+
+.soundwave {
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    gap: 3px;
+    margin-top: 30px;
+    height: 150px;
+}
+
+.bar {
+    width: 5px;
+    background-color: #00ccff;
+    transition: height 0.05s ease;
+    box-shadow: 0 0 8px #00ccff;
+}
+
+.warning-marquee {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8); /* Dark background for the marquee */
+    color: #ffcc00; /* Yellow color for the warning text */
+    font-size: 1.2rem;
+    padding: 10px 0;
+    box-shadow: 0 -2px 10px rgba(255, 255, 255, 0.2);
+    white-space: nowrap;
+    text-align: center; /* Center text in marquee */
+}
